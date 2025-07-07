@@ -1,1 +1,85 @@
-/* Start coding here */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #888;
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 8px;
+  font-weight: bold;
+}
+
+.chatroom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.messages-left,
+.messages-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messages-left {
+  margin-left: 10px;
+  margin-top: 200px;
+}
+
+.messages-right {
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.message-gray {
+  background: #888;
+  color: #fff;
+  border-radius: 16px;
+  padding: 8px 24px;
+  min-width: 120px;
+  margin-bottom: 4px;
+  position: relative;
+  font-size: 18px;
+}
+.message-white {
+  background: #bebebe;
+  color: #000000;
+  border-radius: 16px;
+  padding: 8px 24px;
+  min-width: 120px;
+  margin-bottom: 4px;
+  position: relative;
+  font-size: 18px;
+}
+
+.message-green {
+  background: #00cc00;
+  border-radius: 16px;
+  padding: 8px 24px;
+  min-width: 120px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  margin-right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 15px;
+    height: 15px;
+    background-color: #3a3a3a;
+    color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: none;
+    z-index: 1;
+  }
