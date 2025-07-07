@@ -1,1 +1,76 @@
 /* Start coding here */
+
+body {
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: #fff;
+}
+
+.chatroom-header {
+  background: #888;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 8px;
+  font-family: inherit;
+}
+
+.chatroom-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.chatroom-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.chat-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 10px;
+  margin-top: 200px;
+}
+
+.chat-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.chat-bubble {
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  max-width: 220px;
+  display: inline-block;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+.chat-bubble.left {
+  background: #888;
+  color: #fff;
+  text-align: left;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.chat-bubble.right {
+  background: #00c300;
+  color: #fff;
+  text-align: left;
+  min-width: 300px;
+}
+
+.chat-bubble.right.emojis {
+  background: #00c300;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: left;
+}
