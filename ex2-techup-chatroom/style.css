@@ -1,1 +1,130 @@
-/* Start coding here */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #888;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chat-container {
+    padding: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.message.left {
+    text-align: left;
+}
+
+.message.right {
+    text-align:right/* แก้จาก right เป็น left */
+}
+
+.message.right .message-bubble {
+    margin-left: auto;   /* ดันกล่องไปชิดขวา */
+    text-align: left;    /* ให้ข้อความในกล่องชิดซ้าย */
+}
+
+.message-bubble {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 20px;
+    position: relative;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+.message-bubble.short {
+    max-width: 80px;
+}
+
+.message-bubble.medium {
+    max-width: 200px;
+}
+
+.message-bubble.long {
+    max-width: 300px;
+}
+
+.message-bubble.light-gray {
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+.message-bubble.gray {
+    background-color: #888;
+    color: white;
+}
+
+.message-bubble.green {
+    background-color: #00c851;
+    color: white;
+}
+
+/* หางสำหรับข้อความสีเทาฝั่งซ้าย */
+.message-bubble.gray.with-tail::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #888;
+}
+
+/* หางสำหรับข้อความ "สวัสดีจ้า" */
+.message-bubble.green.with-tail::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    width: 14px;
+    height: 7px;
+    background: #00c851;
+    border-bottom-right-radius: 20px;
+    transform: rotate(-50deg);
+    z-index: 1;
+}
+
+/* ปุ่ม X สำหรับข้อความสีเทา */
+.close-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #666;
+    color: white;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    background-color: #555;
+}
+
+/* Emoji styles */
+.emoji {
+    font-size: 20px;
+    background: none;
+}
